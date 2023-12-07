@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>BBC ||Contact Us</title>
+        <link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible"
+        content="IE=edge"/>
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1.0" />
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+        <link rel="stylesheet"href="stylesheet.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+        
+        <style>
+        
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 90px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        label {
+            margin-bottom: 5px;
+        }
+        
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+        input:invalid {
+            border: 1px solid rgb(105, 98, 98);
+        }
+        
+        input:valid {
+            border: 1px solid #ccc;
+        }
+        .error {
+            color: red;
+            }
+        </style>
+    </head>
+
+<body>
+    
+    <!--Setting up a background for the website-->
+<div class="background">
+    <header>
+        <!--creating a navigation bar-->
+        <div class="nav" >
+            <a href="index.html" >
+                 <i class="fa-solid fa-helmet-safety"></i></a>
+                 <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">projects</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+        </div>
+
+        <!--adding a social media icons using google icons -->
+        <div class="sub-nav" >
+            <ul>
+                <li><a href="https://www.facebook.com/login/"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!--adding contact form with script-->
+    
+    <div class="container">
+        <div class="description">
+            <h2 class="heading-primary">
+                <b>Contact Us</b>
+            </h2>
+            <p>If you are interested in any of the services we provide, Call us. we'd love to talk to you about the best way to solve your problems. Can't wait to get started on your site or redesign?. We will contact you to follow up with further questions. 
+              </p>
+        
+
+
+              <form id="contactForm" onsubmit="return validateForm()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required pattern="[A-Za-z\s]+" title="Name should consist of text only (letters and spaces)."><br>
+        
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{9,10}" title="Phone number should be 9 or 10 digits long and consist of numeric characters."><br>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+        
+                <label for="query">Nature of Query:</label>
+                <textarea id="query" name="query" required></textarea><br>
+        
+                <input type="submit" value="Submit">
+            </form>
+        
+            <script>
+                function validateForm() {
+                    var name = document.getElementById("name").value;
+                    var phone = document.getElementById("phone").value;
+                    var email = document.getElementById("email").value;
+        
+                    if (!name.match(/^[A-Za-z\s]+$/)) {
+                        alert("Name should consist of text only (letters and spaces).");
+                        return false;
+                    }
+        
+                    if (!phone.match(/^[0-9]{9,10}$/)) {
+                        alert("Phone number should be 9 or 10 digits long and consist of numeric characters.");
+                        return false;
+                    }
+        
+                    if (!validateEmail(email)) {
+                        alert("Please enter a valid email address.");
+                        return false;
+                    }
+        
+                    return true;
+                }
+        
+                function validateEmail(email) {
+                    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                    return emailRegex.test(email);
+                }
+            </script>
+
+        <!---adding direction-->
+        
+        <div class="map">
+            <h2 class="heading-primary"><b>Directions</b></h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15602.906121851598!2d78.1608839!3d12.1308542!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac17028d770755%3A0x6f5b6f2a52cd51c!2sBright%20building%20consultancy!5e0!3m2!1sen!2sie!4v1696100315289!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- BACK TO TOP BUTTON -->
+	<a href="#" class="back-to-top">
+		<span class="material-icons">arrow_upward</span>
+	</a>
+    
+    
+    <!--setting up the footer content-->
+
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <h3>Bright Building Consultancy</h3>
+            <p class="footer-links">
+                <a href="index.html">Home</a>
+                |
+                <a href="services.html">Services</a>
+                |
+                <a href="projects.html">Projects</a>
+                |
+                <a href="contact.html">COntact Us
+                
+                </a>
+            </p>
+            
+            <p class="footer-company-name">Copyright © 2021 <strong>BBC</strong> All rights reserved</p>
+            <br>
+            <p class="footer-links">
+                <a href="privacy policy.html">Privacy Policy |</a>
+                <a href="Terms and Conditions.html">Terms and Conditions</a>
+            </p>
+        </div>
+        
+        <div class="footer-center">
+            <div>
+                <p><i class="fa fa-map-marker"></i>Kandhaswamy vathiyar street, Dharmapuri</p>
+            </div>
+            
+            <div>
+                <p><i class="fa fa-phone"></i>+91 9443308045</p>
+            </div>
+            
+            <div>
+                <p><i class="fa fa-envelope"></i>thebbc1990@gmail.com</p>
+            </div>
+        </div>
+        
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the company</span>
+                <strong>BBC</strong> is a construction company we do all type of projects with goverment approval. Contact us for more info.
+            </p>
+        </div>
+    </footer>
+    </div>
+    
+
+
+   
+</body>
+
+</html>
+
+    
+
+
+ 
+
+
+
